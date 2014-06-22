@@ -33,6 +33,10 @@ class Main extends Sprite
 		
 		UIBuilder.init();
 		trace("UIBuilder.init() is called...");
+		
+		flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
+		trace("UI element added to stage...");
+		
 /*		
  *		Stage:
  *      stage.stageWidth x stage.stageHeight @ stage.dpiScale
