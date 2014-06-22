@@ -3,6 +3,7 @@ package ;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.Lib;
+import ru.stablex.ui.UIBuilder;
 
 /**
  * ...
@@ -23,28 +24,38 @@ class Main extends Sprite
 	
 	function init() 
 	{
-		if (inited) return;
+		trace("init() function is called...");
+		
+		if (inited) return;			// just to make sure that init() isn't called twice ... 
 		inited = true;
 
 		// (your code here)
 		
-		// Stage:
-		// stage.stageWidth x stage.stageHeight @ stage.dpiScale
+		UIBuilder.init();
+		trace("UIBuilder.init() is called...");
+/*		
+ *		Stage:
+ *      stage.stageWidth x stage.stageHeight @ stage.dpiScale
+ *      
+ *      Assets:
+ *      nme.Assets.getBitmapData("img/assetname.jpg");
+ */
 		
-		// Assets:
-		// nme.Assets.getBitmapData("img/assetname.jpg");
+		
 	}
 
 	/* SETUP */
 
 	public function new() 
 	{
+		trace("constructor new() is called...");
 		super();	
 		addEventListener(Event.ADDED_TO_STAGE, added);
 	}
 
 	function added(e) 
 	{
+		trace("added() function is called...");
 		removeEventListener(Event.ADDED_TO_STAGE, added);
 		stage.addEventListener(Event.RESIZE, resize);
 		#if ios
@@ -56,6 +67,7 @@ class Main extends Sprite
 	
 	public static function main() 
 	{
+		trace("public static function main()  is called...");
 		// static entry point
 		Lib.current.stage.align = flash.display.StageAlign.TOP_LEFT;
 		Lib.current.stage.scaleMode = flash.display.StageScaleMode.NO_SCALE;
