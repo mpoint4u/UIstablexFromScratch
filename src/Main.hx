@@ -34,7 +34,13 @@ class Main extends Sprite
 		UIBuilder.init();
 		trace("UIBuilder.init() is called...");
 		
-		flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
+		//flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
+		
+		
+		flash.Lib.current.addChild( UIBuilder.buildFn(
+					'/Users/marcus/Dropbox/DEV/haXe3/pm_haxe3_projects/UIstablexFromScratch/first.xml'
+													)() );
+		
 		trace("UI element added to stage...");
 		
 /*		
