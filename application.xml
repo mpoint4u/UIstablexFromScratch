@@ -3,12 +3,12 @@
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="UIstablexFromScratch" package="UIstablexFromScratch" version="1.0.0" company="pm" />
+	<meta title="UIstablexFromScratch" package="at.mpoint4u.UIstablexFromScratch" version="1.0.0" company="pm" />
 	
 	<!-- output -->
 	<app main="Main" file="UIstablexFromScratch" path="bin" />
 	
-	<window background="#C0C0C0" fps="60" />
+	<window background="#7CE33E" fps="60" />
 	<window width="800" height="480" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
