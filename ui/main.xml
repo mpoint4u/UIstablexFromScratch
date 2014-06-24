@@ -6,6 +6,5 @@
 		on-click="
 					#ColorWidget(custom).color = Std.random(0xFFFFFF);
 					#custom.refresh();
-				 "
-	/>
+				 "/>
 </HBox>

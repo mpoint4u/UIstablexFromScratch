@@ -3,6 +3,8 @@ package ;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.Lib;
+import openfl.display.StageAlign;
+import openfl.display.StageScaleMode;
 import ru.stablex.ui.UIBuilder;
 
 /**
@@ -24,12 +26,13 @@ class Main extends Sprite
 	
 	function init() 
 	{
-		trace("init() function is called...");
+		//trace(" init() function is called...");
 		
 		if (inited) return;			// just to make sure that init() isn't called twice ... 
 		inited = true;
 
-		// (your code here)
+		// ALL KIND OF CUSTOM INITIALIZATION STUFF 
+		// ( stablexui, etc..)
 		
 
         //Register our custom widget, so we can use it in xml
@@ -37,7 +40,7 @@ class Main extends Sprite
 		
 		
 		UIBuilder.init();
-		trace("initializing UIBuilder ...");
+		trace("initializing Stablex UI Builder ...");
 		
 		//flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
 		
@@ -48,10 +51,9 @@ class Main extends Sprite
 					'/Users/marcus/Dropbox/DEV/haXe3/pm_haxe3_projects/UIstablexFromScratch/ui/first.xml'
 													)() );
 		
-		trace("UI elements added to stage...");
+		//trace("UI elements added to stage...");
 		
-/*		
- *		Stage:
+/*		possible Stage adjustments:
  *      stage.stageWidth x stage.stageHeight @ stage.dpiScale
  *      
  *      Assets:
@@ -61,22 +63,24 @@ class Main extends Sprite
 		
 	}
 
-	/* SETUP */
+	/************** SETUP FUNCTIONS ***************/
 
 	public function new() 
 	{
-		trace("constructor new() is called...");
+		//trace("constructor new() is called...");
 		super();	
 		addEventListener(Event.ADDED_TO_STAGE, added);
 	}
 
 	function added(e) 
 	{
-		trace("added() function is called...");
+		//trace("added() function is called...");
 		
+		// change the Event listeners
 		removeEventListener(Event.ADDED_TO_STAGE, added);
 		stage.addEventListener(Event.RESIZE, resize);
 		
+		// call init()
 		#if ios
 		haxe.Timer.delay(init, 100); // iOS 6
 		#else
@@ -86,10 +90,10 @@ class Main extends Sprite
 	
 	public static function main() 
 	{
-		trace("public static function main()  is called...");
+		//trace("public static function main()  is called...");
 		// static entry point
-		Lib.current.stage.align = flash.display.StageAlign.TOP_LEFT;
-		Lib.current.stage.scaleMode = flash.display.StageScaleMode.NO_SCALE;
+		Lib.current.stage.align = StageAlign.TOP_LEFT;
+		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 		Lib.current.addChild(new Main());
 	}
 }
