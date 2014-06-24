@@ -36,8 +36,10 @@ class Main extends Sprite
 		
 		//flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
 		
-		
-		flash.Lib.current.addChild( UIBuilder.buildFn(
+		// we need to use the full path here for iOS to build successfully !!... 
+		// (so it's a good idea to use the same path on windows and macOSX...))
+		flash.Lib.current.addChild( 
+									UIBuilder.buildFn(
 					'/Users/marcus/Dropbox/DEV/haXe3/pm_haxe3_projects/UIstablexFromScratch/first.xml'
 													)() );
 		
@@ -66,8 +68,10 @@ class Main extends Sprite
 	function added(e) 
 	{
 		trace("added() function is called...");
+		
 		removeEventListener(Event.ADDED_TO_STAGE, added);
 		stage.addEventListener(Event.RESIZE, resize);
+		
 		#if ios
 		haxe.Timer.delay(init, 100); // iOS 6
 		#else
