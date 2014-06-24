@@ -31,8 +31,13 @@ class Main extends Sprite
 
 		// (your code here)
 		
+
+        //Register our custom widget, so we can use it in xml
+        UIBuilder.regClass('ColorWidget');		
+		
+		
 		UIBuilder.init();
-		trace("UIBuilder.init() is called...");
+		trace("initializing UIBuilder ...");
 		
 		//flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
 		
@@ -40,10 +45,10 @@ class Main extends Sprite
 		// (so it's a good idea to use the same path on windows and macOSX...))
 		flash.Lib.current.addChild( 
 									UIBuilder.buildFn(
-					'/Users/marcus/Dropbox/DEV/haXe3/pm_haxe3_projects/UIstablexFromScratch/first.xml'
+					'/Users/marcus/Dropbox/DEV/haXe3/pm_haxe3_projects/UIstablexFromScratch/ui/first.xml'
 													)() );
 		
-		trace("UI element added to stage...");
+		trace("UI elements added to stage...");
 		
 /*		
  *		Stage:
