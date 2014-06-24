@@ -9,7 +9,7 @@
 	<!-- output -->
 	<app main="Main" file="UIstablexFromScratch" path="bin" />
 	
-	<window background="#6D5AC5" fps="60" />
+	<window background="#C6EA35" fps="60" />
 <!--	<window width="480" height="800" unless="mobile" />-->
 <!--	<window width="480" height="800" orientation="portrait" 	unless="mobile" />-->
 	<window width="480" height="800" orientation="portrait" 	 			/>
