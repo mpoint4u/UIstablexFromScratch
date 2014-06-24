@@ -3,14 +3,19 @@
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="UIstablexFromScratch" package="at.mpoint4u.UIstablexFromScratch" version="1.0.0" company="pm" />
+	<meta title="UIstablexFromScratch" package="at.mpoint4u.UIstablexFromScratch" 
+	      version="1.0.0" company="pm" />
 	
 	<!-- output -->
 	<app main="Main" file="UIstablexFromScratch" path="bin" />
 	
-	<window background="#C7EC33" fps="60" />
-	<window width="800" height="480" unless="mobile" />
-	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	<window background="#6D5AC5" fps="60" />
+<!--	<window width="480" height="800" unless="mobile" />-->
+<!--	<window width="480" height="800" orientation="portrait" 	unless="mobile" />-->
+	<window width="480" height="800" orientation="portrait" 	 			/>
+	<window width="0"   height="0" orientation="landscape"      if="mobile" />
+	
+<!--	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />-->
 	
 	<!-- classpath, haxe libs -->
 	<source path="src" />
