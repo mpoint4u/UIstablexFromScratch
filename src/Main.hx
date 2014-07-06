@@ -15,14 +15,34 @@ import ru.stablex.ui.UIBuilder;
 class Main extends Sprite 
 {
 	var inited:Bool;
-
-	/* ENTRY POINT */
 	
-	function resize(e) 
+	/* CONSTRUCTOR */	
+	public function new() 
 	{
-		if (!inited) init();
-		// else (resize or orientation change)
-	}
+		//trace("constructor new() is called...");
+		super();	
+		addEventListener(Event.ADDED_TO_STAGE, added);
+	}	
+	
+	
+	function constructMainUI():Void 
+	{
+		//flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
+		
+		// we need to use the full path here for iOS to build successfully !!... 
+		// (so it's a good idea to use the same path on windows and macOSX...))
+		flash.Lib.current.addChild( 
+									UIBuilder.buildFn(
+	//					'ui/first.xml'
+	//					'ui/second.xml'
+					'ui/third.xml'
+													)() );
+		
+		trace("adding new widget as child to stage...");
+	}	
+
+	
+	/************** SETUP FUNCTIONS ***************/
 	
 	function init() 
 	{
@@ -31,10 +51,9 @@ class Main extends Sprite
 		if (inited) return;			// just to make sure that init() isn't called twice ... 
 		inited = true;
 
-		// ALL KIND OF CUSTOM INITIALIZATION STUFF 
+		// ******** ALL KIND OF CUSTOM INITIALIZATION STUFF ********** 
 		// ( stablexui, etc..)
 		
-
         //Register our custom widget, so we can use it in xml
         UIBuilder.regClass('ColorWidget');		
 		trace("regClass('ColorWidget'...");
@@ -43,36 +62,21 @@ class Main extends Sprite
 		UIBuilder.init();
 		trace("initializing Stablex UI Builder ...");		
 		
-		//flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
-		
-		// we need to use the full path here for iOS to build successfully !!... 
-		// (so it's a good idea to use the same path on windows and macOSX...))
-		flash.Lib.current.addChild( 
-									UIBuilder.buildFn(
-//					'ui/first.xml'
-//					'ui/second.xml'
-					'ui/third.xml'
-													)() );
-		
-		trace("adding new widget as child to stage...");
-		
-/*		possible Stage adjustments:
- *      stage.stageWidth x stage.stageHeight @ stage.dpiScale
- *      
- *      Assets:
- *      nme.Assets.getBitmapData("img/assetname.jpg");
- */
-		
-		
+		constructMainUI();
 	}
 
-	/************** SETUP FUNCTIONS ***************/
-
-	public function new() 
+	function resize(e) 
 	{
-		//trace("constructor new() is called...");
-		super();	
-		addEventListener(Event.ADDED_TO_STAGE, added);
+/*			if (!inited) init();
+			else (resize or orientation change)*/
+			
+			if (!inited) 
+			{
+				init();
+			} else 
+			{
+				// resize or orientation change			
+			}
 	}
 
 	function added(e) 
@@ -87,10 +91,12 @@ class Main extends Sprite
 		#if ios
 		haxe.Timer.delay(init, 100); // iOS 6
 		#else
+
 		init();
 		#end
 	}
 	
+	/* ENTRY POINT */
 	public static function main() 
 	{
 		//trace("public static function main()  is called...");
