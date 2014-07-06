@@ -48,7 +48,8 @@ class Main extends Sprite
 		// (so it's a good idea to use the same path on windows and macOSX...))
 		flash.Lib.current.addChild( 
 									UIBuilder.buildFn(
-					'/Users/marcus/Dropbox/DEV/haXe3/pm_haxe3_projects/UIstablexFromScratch/ui/first.xml'
+//					'ui/first.xml'
+					'ui/second.xml'
 													)() );
 		
 		//trace("UI elements added to stage...");
