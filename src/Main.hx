@@ -1,8 +1,8 @@
 package ;
 
-import flash.display.Sprite;
-import flash.events.Event;
-import flash.Lib;
+import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.Lib;
 import openfl.display.StageAlign;
 import openfl.display.StageScaleMode;
 import ru.stablex.ui.UIBuilder;
