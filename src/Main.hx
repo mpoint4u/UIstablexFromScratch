@@ -37,10 +37,11 @@ class Main extends Sprite
 
         //Register our custom widget, so we can use it in xml
         UIBuilder.regClass('ColorWidget');		
+		trace("regClass('ColorWidget'...");
 		
 		
 		UIBuilder.init();
-		trace("initializing Stablex UI Builder ...");
+		trace("initializing Stablex UI Builder ...");		
 		
 		//flash.Lib.current.addChild( UIBuilder.buildFn('first.xml')() );
 		
@@ -49,10 +50,11 @@ class Main extends Sprite
 		flash.Lib.current.addChild( 
 									UIBuilder.buildFn(
 //					'ui/first.xml'
-					'ui/second.xml'
+//					'ui/second.xml'
+					'ui/third.xml'
 													)() );
 		
-		//trace("UI elements added to stage...");
+		trace("adding new widget as child to stage...");
 		
 /*		possible Stage adjustments:
  *      stage.stageWidth x stage.stageHeight @ stage.dpiScale
