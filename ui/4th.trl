@@ -22,33 +22,35 @@ line4="w=&quot;{*w*}&quot;">
 line0="VBox"
 line1="h=&quot;{*h*}&quot;"
 line2="top=&quot;{*top*}&quot;"
-line3="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
+line3="id=&quot;{*id*}&quot;"
 line4="padding=&quot;{*padding*}&quot;"
 line5="childPadding=&quot;{*childPadding*}&quot;"
 line6="on-click=&quot;{*on-click*}&quot;"
 line7="w=&quot;{*w*}&quot;"
-line8="id=&quot;{*id*}&quot;"
+line8="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
 line9="left=&quot;{*left*}&quot;">
 <h type="Text" ref="y">700</h>
 <top type="Text">#ColorWidget(custom).y</top>
-<skin:Paint-border type="Text">1</skin:Paint-border>
+<id type="Text">'myVBox'</id>
 <padding type="Text">20</padding>
 <childPadding type="Text">7</childPadding>
 <on-click type="Text">trace($this.w);</on-click>
 <w type="Text">400</w>
-<id type="Text">'myVBox'</id>
+<skin:Paint-border type="Text">1</skin:Paint-border>
 <left type="Text">#ColorWidget(custom).x</left>
 <HBox item="y"
 line0="HBox"
 line1="padding=&quot;{*padding*}&quot;"
 line2="childPadding=&quot;{*childPadding*}&quot;"
-line3="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;">
+line3="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line4="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;">
 <padding type="Text" ref="y">15</padding>
 <childPadding type="Text">5</childPadding>
+<skin:Paint-color type="Text">0x999999</skin:Paint-color>
 <skin:Paint-border type="Text">1</skin:Paint-border>
 <VBox item="y">
-<skin:Paint-border>1</skin:Paint-border>
 <padding>5</padding>
+<skin:Paint-border>1</skin:Paint-border>
 <Text item="y"
 line0="Text"
 line1="text=&quot;{*text*}&quot;"
@@ -78,11 +80,11 @@ line5="h=&quot;{*h*}&quot;">
 </Text>
 </VBox>
 <VBox item="y">
-<skin:Paint-border>1</skin:Paint-border>
 <padding>5</padding>
+<skin:Paint-border>1</skin:Paint-border>
 <Text item="y">
 <text>'3rd text widget!'</text>
-<skin:Paint-color>0xF96039</skin:Paint-color>
+<skin:Paint-color>0xabd0bc</skin:Paint-color>
 <skin:Paint-border>1</skin:Paint-border>
 <w>90</w>
 <h>50</h>
@@ -93,7 +95,7 @@ line1="text=&quot;{*text*}&quot;"
 line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
 line3="on-click=&quot;{*on-click*}&quot;">
 <text type="Text" ref="y">'set custom color'</text>
-<skin:Paint-color type="Text">0x999999</skin:Paint-color>
+<skin:Paint-color type="Text">0xC0C0C0</skin:Paint-color>
 <on-click type="Text">#ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh();</on-click>
 </Button>
 </VBox>
@@ -101,6 +103,7 @@ line3="on-click=&quot;{*on-click*}&quot;">
 <HBox item="y">
 <padding>15</padding>
 <childPadding>5</childPadding>
+<skin:Paint-color>0x69b1a9</skin:Paint-color>
 <skin:Paint-border>1</skin:Paint-border>
 <Text item="y">
 <text>'4th text widget!'</text>
