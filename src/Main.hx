@@ -35,7 +35,9 @@ class Main extends Sprite
 									UIBuilder.buildFn(
 	//					'ui/first.xml'
 	//					'ui/second.xml'
-					'ui/third.xml'
+	//				'ui/third.xml'
+					'ui/4th.xml'
+				
 													)() );
 		
 		trace("adding new widget as child to stage...");
