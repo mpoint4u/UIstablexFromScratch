@@ -13,7 +13,7 @@
 <!--	<window width="480" height="800" unless="mobile" />-->
 <!--	<window width="480" height="800" orientation="portrait" 	unless="mobile" />-->
 	<window width="480" height="800" orientation="portrait" 	 			/>
-<!--	<window width="0"   height="0" orientation="landscape"      if="mobile" />-->
+	<window width="0"   height="0"  if="mobile" />
 	
 <!--	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />-->
 	
