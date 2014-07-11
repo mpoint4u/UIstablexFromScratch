@@ -10,11 +10,11 @@
 	<app main="Main" file="UIstablexFromScratch" path="bin" />
 	
 	<window background="#C0C0C0" fps="60" />
-<!--	<window width="480" height="800" unless="mobile" />-->
+	<window width="480" height="800" unless="mobile" />
 <!--	<window width="480" height="800" orientation="portrait" 	unless="mobile" />-->
-	<window width="480" height="800" orientation="portrait" 	 			/>
+<!--	<window width="480" height="800" orientation="portrait" 	 			/>
 	<window width="0"   height="0"  if="mobile" />
-	
+	-->
 <!--	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />-->
 	
 	<!-- classpath, haxe libs -->
