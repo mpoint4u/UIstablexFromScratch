@@ -24,21 +24,21 @@ line6="left=&quot;{*left*}&quot;">
 line0="VBox"
 line1="h=&quot;{*h*}&quot;"
 line2="top=&quot;{*top*}&quot;"
-line3="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
+line3="id=&quot;{*id*}&quot;"
 line4="padding=&quot;{*padding*}&quot;"
 line5="childPadding=&quot;{*childPadding*}&quot;"
 line6="on-click=&quot;{*on-click*}&quot;"
 line7="w=&quot;{*w*}&quot;"
-line8="id=&quot;{*id*}&quot;"
+line8="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
 line9="left=&quot;{*left*}&quot;">
 <h type="Text" ref="y">#ColorWidget(custom).h</h>
 <top type="Text">#ColorWidget(custom).y</top>
-<skin:Paint-border type="Text">1</skin:Paint-border>
+<id type="Text">'myVBox'</id>
 <padding type="Text">20</padding>
 <childPadding type="Text">7</childPadding>
-<on-click type="Text">trace($this.w);</on-click>
+<on-click type="Text">trace('size of VBox is now.. ' + $this.w);</on-click>
 <w type="Text">#ColorWidget(custom).w</w>
-<id type="Text">'myVBox'</id>
+<skin:Paint-border type="Text">1</skin:Paint-border>
 <left type="Text">#ColorWidget(custom).x</left>
 <HBox item="y"
 line0="HBox"
@@ -51,8 +51,8 @@ line4="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;">
 <skin:Paint-color type="Text">0x999999</skin:Paint-color>
 <skin:Paint-border type="Text">1</skin:Paint-border>
 <VBox item="y">
-<skin:Paint-border>1</skin:Paint-border>
 <padding>5</padding>
+<skin:Paint-border>1</skin:Paint-border>
 <Text item="y"
 line0="Text"
 line1="text=&quot;{*text*}&quot;"
@@ -82,8 +82,8 @@ line5="h=&quot;{*h*}&quot;">
 </Text>
 </VBox>
 <VBox item="y">
-<skin:Paint-border>1</skin:Paint-border>
 <padding>5</padding>
+<skin:Paint-border>1</skin:Paint-border>
 <Text item="y">
 <text>'3rd text widget!'</text>
 <skin:Paint-color>0xabd0bc</skin:Paint-color>

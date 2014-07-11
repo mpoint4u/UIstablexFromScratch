@@ -41,7 +41,7 @@ class Main extends Sprite
 				
 													)() );
 		
-		trace("adding new widget as child to stage...");
+		trace("added new widget as child to stage...");
 	}	
 
 	
