@@ -37,7 +37,8 @@ class Main extends Sprite
 	//					'ui/second.xml'
 	//				'ui/third.xml'
 	//				'ui/4th.xml'
-					'ui/5th.xml'
+	//				'ui/5th.xml'	
+					'ui/index.xml'
 				
 													)() );
 		
