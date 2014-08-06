@@ -1,11 +1,12 @@
 package;
+import ru.stablex.ui.widgets.Widget;
 
 
 /**
 * Simple custom widget. Background color of this widget is defined by .color property.
 *
 */
-class ColorWidget extends ru.stablex.ui.widgets.Widget{
+class ColorWidget extends Widget{
 
     //property to define background color. By default it's black
     public var color : Int = 0x000000;

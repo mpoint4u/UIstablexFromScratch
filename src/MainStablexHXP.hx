@@ -23,16 +23,9 @@ class MainStablexHXP extends Engine
 
 	override public function init()
 	{
-#if debug
-		HXP.console.enable();
-#end
-		HXP.scene = new MainScene();
-	}
-	
-	public function constructStablexUI() {
-		
 		// ******** ALL KIND OF CUSTOM INITIALIZATION STUFF ********** 
-		// ( stablexui, etc..)
+		
+		// Stablexui init first !! ... 
 
 		//register main class to access it's methods and properties in xml
 		//UIBuilder.regClass('Main');
@@ -47,13 +40,27 @@ class MainStablexHXP extends Engine
 		trace("initializing Stablex UI Builder ...");
 		
 		//register skins
-		//UIBuilder.regSkins('ui/android/skins.xml');
+		//UIBuilder.regSkins('ui/android/skins.xml');		
+		
+		
+#if debug
+		HXP.console.enable();
+		trace("HXP.console.enabled ...");
+#end
+		HXP.scene = new MainScene();
+		trace("HXP.scene initialized ...");
+		
+		constructStablexUI();
+	}
 	
+	public function constructStablexUI() {
+		
+		trace("constructStablexUI() called...");
 		//create callback for alert popup
 		//Main.alert = UIBuilder.buildFn('ui/alert.xml');
 	
 		//Create our UI
-		var ui = UIBuilder.buildFn('ui/index.xml')();
+		var ui = UIBuilder.buildFn('ui/main.xml')();
 		//ui.show();
 		
 		//Lib.current.addChild(ui);

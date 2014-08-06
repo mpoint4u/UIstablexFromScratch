@@ -3,6 +3,7 @@ package;
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Image;
 import com.haxepunk.Scene;
+import openfl.Lib;
 
 class MainScene extends Scene
 {
@@ -17,12 +18,20 @@ class MainScene extends Scene
 	// methods
 	public override function begin() {
 		// add the png-image to the Entity
-		block = addGraphic(new Image("assets/img/block.png"));
+		block = addGraphic(new Image("assets/img/nme.png"));
 	}
 
 	public override function update() {
+		
+		if ( block.x < Lib.current.stage.stageWidth ) 
+		{
+			block.moveBy(2, 0);			
+		} else {			
+			block.x = 0;
+			block.y += 50;
+		}
+		
 
-		block.moveBy(2, 1);
 
 		super.update();
 	}
