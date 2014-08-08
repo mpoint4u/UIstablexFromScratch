@@ -2,6 +2,7 @@ package ;
 
 import com.haxepunk.Engine;
 import com.haxepunk.HXP;
+import com.haxepunk.RenderMode;
 import openfl.display.StageAlign;
 import openfl.display.StageScaleMode;
 import openfl.Lib;
@@ -14,11 +15,12 @@ import ru.stablex.ui.UIBuilder;
 class MainStablexHXP extends Engine
 {
 
-/* // ... implicit constructor used right NOW, but could be overridden like this...
- * public function new(width:Int=0, height:Int=0, frameRate:Float=60, fixed:Bool=false, ?renderMode:RenderMode) {	
- * 		super(width, height, frameRate, fixed, ?renderMode);
- * 	} 
- * */
+// ... implicit constructor used right NOW, but could be overridden like this...
+	public function new(width:Int = 0, height:Int = 0, frameRate:Float = 60, fixed:Bool = false, renderMode:RenderMode ) {
+		
+  		super(width, height, frameRate, fixed, renderMode);
+  	} 
+
 
 	override public function init(){  
 		// ******** ALL KIND OF CUSTOM INITIALIZATION STUFF ********** 
@@ -44,23 +46,10 @@ class MainStablexHXP extends Engine
 		HXP.scene = new MainScene();
 												//trace("HXP.scene initialized ...");
 		
-		constructStablexUI();
+		//constructStablexUI();
 	}
 	
-	public function constructStablexUI() {
-		
-		trace("constructStablexUI() called...");
-		//create callback for alert popup
-		//Main.alert = UIBuilder.buildFn('ui/alert.xml');
 	
-		//Create our UI
-		var ui = UIBuilder.buildFn('ui/main.xml')();
-		//ui.show();
-		
-		//Lib.current.addChild(ui);
-		Lib.current.stage.addChild(ui);
-		//addChild(ui);
-	}	
 	
     /** Entry point **/
     static public function main () : Void {
@@ -68,7 +57,16 @@ class MainStablexHXP extends Engine
 		Lib.current.stage.align = StageAlign.TOP_LEFT;
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 
-		new MainStablexHXP();   /*
+		new MainStablexHXP(320, 400, 60, false, 
+			#if	flash  
+				BUFFER
+			#else
+				HARDWARE
+			#end
+		);
+		/*
+		new MainStablexHXP();
+		
 								normally like   
 									Lib.current.addChild(new MainStablexHXP());
 								but constructor of Engine adds it automatically !!
