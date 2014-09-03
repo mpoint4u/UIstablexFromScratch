@@ -1,4 +1,4 @@
-package;
+package ;
 import ru.stablex.ui.widgets.Widget;
 
 

@@ -18,7 +18,6 @@
         "
     >
         <Box padding="10"> <!-- this widget will be taken by Scroll widget as scrolled content -->
-
             <Bmp src="'assets/img/map.jpg'"/>
         </Box>
     </Scroll>
@@ -35,7 +34,7 @@
             $this.scrollY  = $this.h / 2 - $this.box.h / 2;
         "
     >
-        <Box widthPt="100" childPadding="5" paddingTop="10" paddingBottom="10"> <!-- this widget will be taken by Scroll widget as scrolled content -->
+        <Box widthPt="100" childPadding="5" paddingTop="10" paddingBottom="10"> <!-- scrolled content -->
             <meta:repeat times="40">
                 <Widget skin:Tile-border="4" skin:Tile-src="'assets/img/nme.png'" skin:Tile-corners="[20]" widthPt="100" h="50"/>
             </meta:repeat>

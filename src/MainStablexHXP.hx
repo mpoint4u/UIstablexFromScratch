@@ -16,8 +16,13 @@ class MainStablexHXP extends Engine
 {
 
 // ... implicit constructor used right NOW, but could be overridden like this...
-	public function new(width:Int = 0, height:Int = 0, frameRate:Float = 60, fixed:Bool = false, renderMode:RenderMode ) {
-		
+	public function new (
+						width:Int = 0, 
+						height:Int = 0, 
+						frameRate:Float = 60, 
+						fixed:Bool = false, 
+						renderMode:RenderMode ) 
+	{	
   		super(width, height, frameRate, fixed, renderMode);
   	} 
 
