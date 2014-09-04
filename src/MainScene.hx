@@ -12,8 +12,9 @@ class MainScene extends Scene
 {
 	// defining class members	
 	private var block:Entity;
-	//private var mywidget:HBox;
-	private var mywidget:Widget;
+
+	private var mywidget:HBox;
+	//private var mywidget:Widget;
 	
 	// constructor
 	public function new() {
@@ -30,7 +31,7 @@ class MainScene extends Scene
 		
 		// create the widget
 		mywidget = UIBuilder.buildFn('ui/index.xml')();
-															trace(Type.typeof(mywidget));	
+															// trace(Type.typeof(mywidget));	
 		//Lib.current.addChild(mywidget);
 		mywidget.left = 10;
 		mywidget.top = 10;
@@ -42,25 +43,27 @@ class MainScene extends Scene
 
 		if ( block.x < Lib.current.stage.stageWidth ) 
 		{
-			block.moveBy(2, 0);			
+			block.moveBy(3, 0);			
 		} else {			
 			block.x = 0;
 			block.y += 50;
 		}
 		
-/*		if ( mywidget.x < Lib.current.stage.stageWidth) 
+/*
+		if ( mywidget.x < Lib.current.stage.stageWidth) 
 		{
 			mywidget.x += .5;			
 		} else {
 			mywidget.x = 0;
 		}
 		
+		*/
 		if ( mywidget.y < Lib.current.stage.stageHeight) 
 		{
-			mywidget.y += 1;			
+			mywidget.y += 3;			
 		} else {
 			mywidget.y = 0;
-		}*/
+		}
 		
 		super.update();
 	}		
