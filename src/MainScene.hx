@@ -5,7 +5,6 @@ import com.haxepunk.graphics.Image;
 import com.haxepunk.Scene;
 import openfl.Lib;
 import ru.stablex.ui.UIBuilder;
-import ru.stablex.ui.widgets.HBox;
 import ru.stablex.ui.widgets.Widget;
 
 class MainScene extends Scene
@@ -15,6 +14,7 @@ class MainScene extends Scene
 	private var ent2:Entity;
 	//private var mywidget:HBox;
 	private var mywidget:Widget;
+	//private var colorWid:ColorWidget;
 	
 	// constructor
 	public function new() {
@@ -30,13 +30,25 @@ class MainScene extends Scene
 		block = addGraphic(new Image("assets/img/block.png"));		
 		ent2  = addGraphic(new Image("assets/img/nme.png"));
 		
-		// create the widget
+		
+		// create the color widget
+		//colorWid = new ColorWidget();
+/*		colorWid.id = "custom";
+		colorWid.w  = 200;
+		colorWid.h  = 100;
+		colorWid.color = 0x8080C0;*/
+		
+		// create the main widget
 		mywidget = UIBuilder.buildFn('ui/index.xml')();
 															// trace(Type.typeof(mywidget));	
 		//Lib.current.addChild(mywidget);
 		mywidget.left = 10;
 		mywidget.top = 10;
 		Lib.current.stage.addChildAt(mywidget, 1);			// 1 puts Widget over the entities
+		
+		//Lib.current.stage.addChildAt(colorWid, 2);			// 1 puts Widget over the entities
+		
+		
 	}
 
 	public override function update() {
