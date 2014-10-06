@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HBox item="y" tlversion="1.4.1"
+line0="HBox"
+line1="h=&quot;{*h*}&quot;"
+line2="w=&quot;{*w*}&quot;"
+line3="childPadding=&quot;{*childPadding*}&quot;">
+<h type="Text" ref="y">600</h>
+<w type="Text">800</w>
+<childPadding type="Text">20</childPadding>
+<Scroll item="y"
+line0="Scroll"
+line1="hBar-skin:Paint-color=&quot;{*hBar-skin:Paint-color*}&quot;"
+line2="hBar-slider-skin:Paint-color=&quot;{*hBar-slider-skin:Paint-color*}&quot;"
+line3="h=&quot;{*h*}&quot;"
+line4="on-display=&quot;{*on-display*}&quot;"
+line5="vBar-slider-skin:Paint-color=&quot;{*vBar-slider-skin:Paint-color*}&quot;"
+line6="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line7="w=&quot;{*w*}&quot;"
+line8="vBar-skin:Paint-color=&quot;{*vBar-skin:Paint-color*}&quot;"
+line9="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
+line10="hBar-visible=&quot;{*hBar-visible*}&quot;">
+<hBar-skin:Paint-color type="Text" ref="y">0x777777</hBar-skin:Paint-color>
+<hBar-slider-skin:Paint-color type="Text">0x002200</hBar-slider-skin:Paint-color>
+<h type="Text">500</h>
+<on-display type="Text">             $this.scrollX = $this.w / 2 - $this.box.w / 2;             $this.scrollY  = $this.h / 2 - $this.box.h / 2;         </on-display>
+<vBar-slider-skin:Paint-color type="Text">0x002200</vBar-slider-skin:Paint-color>
+<skin:Paint-color type="Text">0xAAAAAA</skin:Paint-color>
+<w type="Text">500</w>
+<vBar-skin:Paint-color type="Text">0x777777</vBar-skin:Paint-color>
+<skin:Paint-border type="Text">4</skin:Paint-border>
+<hBar-visible type="Text"></hBar-visible>
+<Box item="y"
+line0="Box"
+line1="padding=&quot;{*padding*}&quot;"
+line2="childPadding=&quot;{*childPadding*}&quot;"
+line3="paddingBottom=&quot;{*paddingBottom*}&quot;"
+line4="paddingTop=&quot;{*paddingTop*}&quot;"
+line5="widthPt=&quot;{*widthPt*}&quot;">
+<padding type="Text" ref="y">10</padding>
+<childPadding type="Text"></childPadding>
+<paddingBottom type="Text"></paddingBottom>
+<paddingTop type="Text"></paddingTop>
+<widthPt type="Text"></widthPt>
+<Bmp item="y"
+line0="Bmp"
+line1="src=&quot;{*src*}&quot;">
+<src type="Text" ref="y">'assets/img/map.jpg'</src>
+</Bmp>
+</Box>
+</Scroll>
+<Scroll item="y">
+<h>500</h>
+<on-display>             $this.scrollY  = $this.h / 2 - $this.box.h / 2;         </on-display>
+<vBar-slider-skin:Paint-color>0x002200</vBar-slider-skin:Paint-color>
+<skin:Paint-color>0xAAAAAA</skin:Paint-color>
+<w>150</w>
+<skin:Paint-border>4</skin:Paint-border>
+<hBar-visible>false</hBar-visible>
+<Box item="y">
+<childPadding>5</childPadding>
+<paddingBottom>10</paddingBottom>
+<paddingTop>10</paddingTop>
+<widthPt>100</widthPt>
+<meta:repeat item="y"
+line0="meta:repeat"
+line1="times=&quot;{*times*}&quot;">
+<times type="Text" ref="y">40</times>
+<Widget item="y"
+line0="Widget"
+line1="widthPt=&quot;{*widthPt*}&quot;"
+line2="h=&quot;{*h*}&quot;"
+line3="skin:Tile-border=&quot;{*skin:Tile-border*}&quot;"
+line4="skin:Tile-corners=&quot;{*skin:Tile-corners*}&quot;"
+line5="skin:Tile-src=&quot;{*skin:Tile-src*}&quot;">
+<widthPt type="Text" ref="y">100</widthPt>
+<h type="Text">50</h>
+<skin:Tile-border type="Text">4</skin:Tile-border>
+<skin:Tile-corners type="Text">[20]</skin:Tile-corners>
+<skin:Tile-src type="Text">'assets/img/nme.png'</skin:Tile-src>
+</Widget>
+</meta:repeat>
+</Box>
+</Scroll>
+</HBox>
