@@ -13,8 +13,8 @@ class MainScene extends Scene
 	// defining class members	
 	private var block:Entity;
 	private var ent2:Entity;
-	private var mywidget:HBox;
-	//private var mywidget:Widget;
+	//private var mywidget:HBox;
+	private var mywidget:Widget;
 	
 	// constructor
 	public function new() {
