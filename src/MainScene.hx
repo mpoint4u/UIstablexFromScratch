@@ -49,8 +49,8 @@ class MainScene extends Scene
 		Lib.current.stage.addChildAt(mywidget, 1);			// 1 puts Widget over the entities	
 	}
 	
-	function controlEnt1():Void 
-	{
+	function controlEnt1():Void {
+		
 		if ( ent1.x < Lib.current.stage.stageWidth ) 
 		{
 			ent1.moveBy(3, 0);			
@@ -60,8 +60,8 @@ class MainScene extends Scene
 		}
 	}
 	
-	function controlEnt2():Void 
-	{
+	function controlEnt2():Void {
+		
 		if( ent2.y < Lib.current.stage.stageHeight ){
 			  ent2.moveBy(0, 2);
 		} else {
