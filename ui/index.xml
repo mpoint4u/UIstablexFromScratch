@@ -1,53 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<VBox childPadding="12">
-	
-	<ColorWidget id="'custom'" w="100" h="100" color="0x8080C0" />
-	<Button text="'set random color'" skin:Paint-color="0x999999" 
-			on-click=" #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); "/>	
-	
-	<HBox w="800" h="600" childPadding="20">
-		
-	
-		<!-- World map -->	
-		<Scroll
-			w           = "500"
-			h           = "500"
-			skin:Paint-color  = "0xAAAAAA"
-			skin:Paint-border = "4"
-			vBar-slider-skin:Paint-color="0x002200"
-			hBar-slider-skin:Paint-color="0x002200"
-			hBar-skin:Paint-color="0x777777"
-			vBar-skin:Paint-color="0x777777"
-			on-display="
-				$this.scrollX = $this.w / 2 - $this.box.w / 2;
-				$this.scrollY  = $this.h / 2 - $this.box.h / 2;
-			"
-		>
-			<Box padding="10"> <!-- this widget will be taken by Scroll widget as scrolled content -->
-				<Bmp src="'assets/img/map.jpg'"/>
-			</Box>
-		</Scroll>
-	
-		<!-- List -->
-		<Scroll
-			w                 = "150"
-			h                 = "500"
-			skin:Paint-color  = "0xAAAAAA"
-			skin:Paint-border = "4"
-			vBar-slider-skin:Paint-color="0x002200"
-			hBar-visible = "false"
-			on-display = "
-				$this.scrollY  = $this.h / 2 - $this.box.h / 2;
-			"
-		>
-			<Box widthPt="100" childPadding="5" paddingTop="10" paddingBottom="10"> <!-- scrolled content -->
-				<meta:repeat times="40">
-					<Widget skin:Tile-border="4" skin:Tile-src="'assets/img/nme.png'" skin:Tile-corners="[20]" widthPt="100" h="50"/>
-				</meta:repeat>
-			</Box>
-		</Scroll>
-	</HBox>
-	
-	
+<?xml version="1.0" encoding="utf-8" ?>
+<VBox childPadding="10">
+   <ColorWidget color="0x8080C0" h="100" id="'custom'" w="100"></ColorWidget>
+   <Button text="'set random color'" skin:Paint-color="0x999999" on-click=" #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); "></Button>
+   <HBox h="600" w="800" childPadding="20">
+      <Scroll hBar-skin:Paint-color="0x777777" hBar-slider-skin:Paint-color="0x002200" h="500" on-display="     $this.scrollX = $this.w / 2 - $this.box.w / 2;     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    " vBar-slider-skin:Paint-color="0x002200" skin:Paint-color="0xAAAAAA" w="500" vBar-skin:Paint-color="0x777777" skin:Paint-border="4">
+         <Box padding="10">
+            <Bmp src="'assets/img/map.jpg'"></Bmp>
+         </Box>
+      </Scroll>
+      <Scroll h="500" on-display="     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    " vBar-slider-skin:Paint-color="0x002200" skin:Paint-color="0xAAAAAA" w="150" skin:Paint-border="4" hBar-visible="false">
+         <Box childPadding="5" paddingBottom="10" paddingTop="10" widthPt="100">
+            <meta:repeat times="40">
+               <Widget widthPt="100" h="50" skin:Tile-border="4" skin:Tile-corners="[20]" skin:Tile-src="'assets/img/nme.png'"></Widget>
+            </meta:repeat>
+         </Box>
+      </Scroll>
+   </HBox>
 </VBox>

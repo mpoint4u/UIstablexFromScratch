@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HBox item="y" tlversion="1.4.1"
+<VBox item="y" tlversion="1.4.1"
+line0="VBox"
+line1="childPadding=&quot;{*childPadding*}&quot;">
+<childPadding type="Text" ref="y">10</childPadding>
+<ColorWidget item="y"
+line0="ColorWidget"
+line1="color=&quot;{*color*}&quot;"
+line2="h=&quot;{*h*}&quot;"
+line3="id=&quot;{*id*}&quot;"
+line4="w=&quot;{*w*}&quot;">
+<color type="Text" ref="y">0x8080C0</color>
+<h type="Text">100</h>
+<id type="Text">'custom'</id>
+<w type="Text">100</w>
+</ColorWidget>
+<Button item="y"
+line0="Button"
+line1="text=&quot;{*text*}&quot;"
+line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line3="on-click=&quot;{*on-click*}&quot;">
+<text type="Text" ref="y">'set random color'</text>
+<skin:Paint-color type="Text">0x999999</skin:Paint-color>
+<on-click type="Text"> #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); </on-click>
+</Button>
+<HBox item="y"
 line0="HBox"
 line1="h=&quot;{*h*}&quot;"
 line2="w=&quot;{*w*}&quot;"
@@ -22,7 +46,7 @@ line10="hBar-visible=&quot;{*hBar-visible*}&quot;">
 <hBar-skin:Paint-color type="Text" ref="y">0x777777</hBar-skin:Paint-color>
 <hBar-slider-skin:Paint-color type="Text">0x002200</hBar-slider-skin:Paint-color>
 <h type="Text">500</h>
-<on-display type="Text">             $this.scrollX = $this.w / 2 - $this.box.w / 2;             $this.scrollY  = $this.h / 2 - $this.box.h / 2;         </on-display>
+<on-display type="Text">     $this.scrollX = $this.w / 2 - $this.box.w / 2;     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    </on-display>
 <vBar-slider-skin:Paint-color type="Text">0x002200</vBar-slider-skin:Paint-color>
 <skin:Paint-color type="Text">0xAAAAAA</skin:Paint-color>
 <w type="Text">500</w>
@@ -50,7 +74,7 @@ line1="src=&quot;{*src*}&quot;">
 </Scroll>
 <Scroll item="y">
 <h>500</h>
-<on-display>             $this.scrollY  = $this.h / 2 - $this.box.h / 2;         </on-display>
+<on-display>     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    </on-display>
 <vBar-slider-skin:Paint-color>0x002200</vBar-slider-skin:Paint-color>
 <skin:Paint-color>0xAAAAAA</skin:Paint-color>
 <w>150</w>
@@ -82,3 +106,4 @@ line5="skin:Tile-src=&quot;{*skin:Tile-src*}&quot;">
 </Box>
 </Scroll>
 </HBox>
+</VBox>
