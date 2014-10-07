@@ -3,26 +3,6 @@
 line0="VBox"
 line1="childPadding=&quot;{*childPadding*}&quot;">
 <childPadding type="Text" ref="y">10</childPadding>
-<ColorWidget item="y"
-line0="ColorWidget"
-line1="color=&quot;{*color*}&quot;"
-line2="h=&quot;{*h*}&quot;"
-line3="id=&quot;{*id*}&quot;"
-line4="w=&quot;{*w*}&quot;">
-<color type="Text" ref="y">0x8080C0</color>
-<h type="Text">100</h>
-<id type="Text">'custom'</id>
-<w type="Text">100</w>
-</ColorWidget>
-<Button item="y"
-line0="Button"
-line1="text=&quot;{*text*}&quot;"
-line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
-line3="on-click=&quot;{*on-click*}&quot;">
-<text type="Text" ref="y">'set random color'</text>
-<skin:Paint-color type="Text">0x999999</skin:Paint-color>
-<on-click type="Text"> #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); </on-click>
-</Button>
 <HBox item="y"
 line0="HBox"
 line1="h=&quot;{*h*}&quot;"
@@ -106,4 +86,24 @@ line5="skin:Tile-src=&quot;{*skin:Tile-src*}&quot;">
 </Box>
 </Scroll>
 </HBox>
+<ColorWidget item="y"
+line0="ColorWidget"
+line1="color=&quot;{*color*}&quot;"
+line2="h=&quot;{*h*}&quot;"
+line3="id=&quot;{*id*}&quot;"
+line4="w=&quot;{*w*}&quot;">
+<color type="Text" ref="y">0x8080C0</color>
+<h type="Text">100</h>
+<id type="Text">'custom'</id>
+<w type="Text">100</w>
+</ColorWidget>
+<Button item="y"
+line0="Button"
+line1="text=&quot;{*text*}&quot;"
+line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line3="on-click=&quot;{*on-click*}&quot;">
+<text type="Text" ref="y">'set random color'</text>
+<skin:Paint-color type="Text">0x999999</skin:Paint-color>
+<on-click type="Text"> #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); </on-click>
+</Button>
 </VBox>
