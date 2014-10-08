@@ -12,6 +12,7 @@
 				 format-size="14"
 				 format-color="0xff0000"
 				 format-bold="true" />
+
 		<Red w="400"
 			 h="60"
 			 skin:Paint-color="0xFF0000"
@@ -31,10 +32,17 @@
 			 icoPressed-src="'assets/img/haxePressed24.png'"
 			 format-size="24"
 			 format-color="0x400080" />
+
 		<AnotherFormat format-size="18"
 					   format-color="0x400080"
 					   format-bold="true"
-					   autoWidth="true" />
+					   h="48"
+					   autoWidth="true"
+					   skin:Paint-color="0xB3B3FF"
+					   skin:Paint-alpha="0.5"
+					   skin:Paint-corners="[40, 40]"
+					   skin:Paint-border="4"
+					   skin:Paint-borderColor="0x5E5EFF" />
 	</Button>
 	<Text>
 		<Title filters="[new flash.filters.DropShadowFilter()]"

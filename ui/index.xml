@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Widget>
-
 	<ColorWidget id="'custom'"
 				 color="0x8080C0"
 				 top="0"
@@ -9,8 +8,10 @@
 				 h="600">
 	</ColorWidget>
 
-
 	<VBox>
+		<Text defaults="'Title'"
+			  text="'Playing with HaxePunk and StablexUI'"
+			  top="50" />
 		<HBox h="600"
 			  w="800"
 			  childPadding="20">
@@ -51,10 +52,9 @@
 				</Box>
 			</Scroll>
 		</HBox>
-		<Button defaults="'Red'"
-				text="'set random color'"
+		<Button defaults="'AnotherFormat'"
+				text="'  set random color  '"
 				on-click=" #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); ">
 		</Button>
 	</VBox>
-
 </Widget>
