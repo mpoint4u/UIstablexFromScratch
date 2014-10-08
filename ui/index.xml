@@ -50,8 +50,8 @@
 				</Box>
 			</Scroll>
 		</HBox>
-		<Button text="'set random color'"
-				skin:Paint-color="0x999999"
+		<Button defaults="'Red'"
+				text="'set random color'"
 				on-click=" #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); ">
 		</Button>
 	</VBox>

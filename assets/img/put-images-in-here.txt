@@ -1,1 +1,0 @@
-put your image files in here, and they are going to be recognized by OpenFL instantly…
