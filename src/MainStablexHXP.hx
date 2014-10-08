@@ -37,7 +37,7 @@ class MainStablexHXP extends Engine
         //Register our custom widget, so we can use it in xml
         UIBuilder.regClass('ColorWidget');		
 												//trace("regClass('ColorWidget'...");			
-		//UIBuilder.init('ui/android/defaults.xml');
+		UIBuilder.init('ui/defaults.xml');
 		UIBuilder.init();
 												//trace("initializing Stablex UI Builder ...");	
 		//register skins
