@@ -40,7 +40,7 @@ class ColorWidget extends Widget{
     */
     private function _paintBackground () : Void {
         this.graphics.clear();
-        this.graphics.beginFill(this.color);
+        this.graphics.beginFill(this.color, 0.5);
         this.graphics.drawRect(0, 0, this.w, this.h);
         this.graphics.endFill();
     }//function _paintBackground()

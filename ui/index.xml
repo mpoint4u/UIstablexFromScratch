@@ -5,10 +5,10 @@
 				 top="0"
 				 left="0"
 				 w="800"
-				 h="600">
+				 h="625">
 	</ColorWidget>
 
-	<VBox>
+	<VBox paddingTop="20">
 		<Text defaults="'Title'"
 			  text="'Playing with HaxePunk and StablexUI'"
 			  top="50" />
