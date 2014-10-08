@@ -33,6 +33,7 @@
 					vBar-slider-skin:Paint-color="0x002200"
 					skin:Paint-color="0xAAAAAA"
 					w="150"
+					vBar-skin:Paint-color="0x777777"
 					skin:Paint-border="4"
 					hBar-visible="false">
 				<Box childPadding="5"
