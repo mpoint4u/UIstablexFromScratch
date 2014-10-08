@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<VBox item="y" tlversion="1.4.1"
-line0="VBox"
-line1="childPadding=&quot;{*childPadding*}&quot;">
-<childPadding type="Text" ref="y">10</childPadding>
+<Widget item="y" tlversion="1.4.1"
+line0="Widget"
+line1="h=&quot;{*h*}&quot;"
+line2="skin:Tile-border=&quot;{*skin:Tile-border*}&quot;"
+line3="skin:Tile-corners=&quot;{*skin:Tile-corners*}&quot;"
+line4="skin:Tile-src=&quot;{*skin:Tile-src*}&quot;"
+line5="widthPt=&quot;{*widthPt*}&quot;">
+<h type="Text" ref="y"></h>
+<skin:Tile-border type="Text"></skin:Tile-border>
+<skin:Tile-corners type="Text"></skin:Tile-corners>
+<skin:Tile-src type="Text"></skin:Tile-src>
+<widthPt type="Text"></widthPt>
+<ColorWidget item="y"
+line0="ColorWidget"
+line1="color=&quot;{*color*}&quot;"
+line2="h=&quot;{*h*}&quot;"
+line3="top=&quot;{*top*}&quot;"
+line4="w=&quot;{*w*}&quot;"
+line5="id=&quot;{*id*}&quot;"
+line6="left=&quot;{*left*}&quot;">
+<color type="Text" ref="y">0x8080C0</color>
+<h type="Text">600</h>
+<top type="Text">0</top>
+<w type="Text">800</w>
+<id type="Text">'custom'</id>
+<left type="Text">0</left>
+</ColorWidget>
+<VBox item="y"
+line0="VBox">
+<Element_Data type="Text" ref="y"></Element_Data>
 <HBox item="y"
 line0="HBox"
 line1="h=&quot;{*h*}&quot;"
@@ -17,21 +43,21 @@ line1="hBar-skin:Paint-color=&quot;{*hBar-skin:Paint-color*}&quot;"
 line2="hBar-slider-skin:Paint-color=&quot;{*hBar-slider-skin:Paint-color*}&quot;"
 line3="h=&quot;{*h*}&quot;"
 line4="on-display=&quot;{*on-display*}&quot;"
-line5="vBar-slider-skin:Paint-color=&quot;{*vBar-slider-skin:Paint-color*}&quot;"
+line5="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
 line6="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
 line7="w=&quot;{*w*}&quot;"
 line8="vBar-skin:Paint-color=&quot;{*vBar-skin:Paint-color*}&quot;"
-line9="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
+line9="vBar-slider-skin:Paint-color=&quot;{*vBar-slider-skin:Paint-color*}&quot;"
 line10="hBar-visible=&quot;{*hBar-visible*}&quot;">
 <hBar-skin:Paint-color type="Text" ref="y">0x777777</hBar-skin:Paint-color>
 <hBar-slider-skin:Paint-color type="Text">0x002200</hBar-slider-skin:Paint-color>
 <h type="Text">500</h>
 <on-display type="Text">     $this.scrollX = $this.w / 2 - $this.box.w / 2;     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    </on-display>
-<vBar-slider-skin:Paint-color type="Text">0x002200</vBar-slider-skin:Paint-color>
+<skin:Paint-border type="Text">4</skin:Paint-border>
 <skin:Paint-color type="Text">0xAAAAAA</skin:Paint-color>
 <w type="Text">500</w>
 <vBar-skin:Paint-color type="Text">0x777777</vBar-skin:Paint-color>
-<skin:Paint-border type="Text">4</skin:Paint-border>
+<vBar-slider-skin:Paint-color type="Text">0x002200</vBar-slider-skin:Paint-color>
 <hBar-visible type="Text"></hBar-visible>
 <Box item="y"
 line0="Box"
@@ -55,10 +81,11 @@ line1="src=&quot;{*src*}&quot;">
 <Scroll item="y">
 <h>500</h>
 <on-display>     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    </on-display>
-<vBar-slider-skin:Paint-color>0x002200</vBar-slider-skin:Paint-color>
+<skin:Paint-border>4</skin:Paint-border>
 <skin:Paint-color>0xAAAAAA</skin:Paint-color>
 <w>150</w>
-<skin:Paint-border>4</skin:Paint-border>
+<vBar-skin:Paint-color>0x777777</vBar-skin:Paint-color>
+<vBar-slider-skin:Paint-color>0x002200</vBar-slider-skin:Paint-color>
 <hBar-visible>false</hBar-visible>
 <Box item="y">
 <childPadding>5</childPadding>
@@ -69,41 +96,25 @@ line1="src=&quot;{*src*}&quot;">
 line0="meta:repeat"
 line1="times=&quot;{*times*}&quot;">
 <times type="Text" ref="y">40</times>
-<Widget item="y"
-line0="Widget"
-line1="widthPt=&quot;{*widthPt*}&quot;"
-line2="h=&quot;{*h*}&quot;"
-line3="skin:Tile-border=&quot;{*skin:Tile-border*}&quot;"
-line4="skin:Tile-corners=&quot;{*skin:Tile-corners*}&quot;"
-line5="skin:Tile-src=&quot;{*skin:Tile-src*}&quot;">
-<widthPt type="Text" ref="y">100</widthPt>
-<h type="Text">50</h>
-<skin:Tile-border type="Text">4</skin:Tile-border>
-<skin:Tile-corners type="Text">[20]</skin:Tile-corners>
-<skin:Tile-src type="Text">'assets/img/nme.png'</skin:Tile-src>
+<Widget item="y">
+<h>50</h>
+<skin:Tile-border>4</skin:Tile-border>
+<skin:Tile-corners>[20]</skin:Tile-corners>
+<skin:Tile-src>'assets/img/nme.png'</skin:Tile-src>
+<widthPt>100</widthPt>
 </Widget>
 </meta:repeat>
 </Box>
 </Scroll>
 </HBox>
-<ColorWidget item="y"
-line0="ColorWidget"
-line1="color=&quot;{*color*}&quot;"
-line2="h=&quot;{*h*}&quot;"
-line3="id=&quot;{*id*}&quot;"
-line4="w=&quot;{*w*}&quot;">
-<color type="Text" ref="y">0x8080C0</color>
-<h type="Text">100</h>
-<id type="Text">'custom'</id>
-<w type="Text">100</w>
-</ColorWidget>
 <Button item="y"
 line0="Button"
 line1="text=&quot;{*text*}&quot;"
-line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
-line3="on-click=&quot;{*on-click*}&quot;">
+line2="on-click=&quot;{*on-click*}&quot;"
+line3="defaults=&quot;{*defaults*}&quot;">
 <text type="Text" ref="y">'set random color'</text>
-<skin:Paint-color type="Text">0x999999</skin:Paint-color>
 <on-click type="Text"> #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); </on-click>
+<defaults type="Text">'Red'</defaults>
 </Button>
 </VBox>
+</Widget>
