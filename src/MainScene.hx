@@ -24,8 +24,9 @@ class MainScene extends Scene
 															trace("overridden function begin() was called ... ");	
 		
 		// add the png-images to the Entities
-		ent1 = addGraphic(new Image("assets/img/block.png"));		
-		ent2  = addGraphic(new Image("assets/img/nme.png"));
+		ent1 = addGraphic(new Image("assets/img/block.png"), 1);   // HXP layer 1 is over HXP Layer 2 , and they 
+																   // are ALL on OpenFL layer 0 (--> openfl.display.DisplayObject)... !! 
+		ent2 = addGraphic(new Image("assets/img/nme.png"),   2);
 			
 		_createMainWidget();
 	}
@@ -38,7 +39,12 @@ class MainScene extends Scene
 		controlEnt2();
 		
 		super.update();
-	}		
+	}
+	
+	public override function end() {
+		// put stuff in here that need to be done, when ending this scene ... 
+		trace("MainScene has ended ... ");
+	}
 	
 	private function _createMainWidget():Void 
 	{
@@ -48,7 +54,7 @@ class MainScene extends Scene
 		// give an offset on the main widget IF NEEDED !! ... 
 		mywidget.left = 0;
 		mywidget.top = 0;
-		Lib.current.stage.addChildAt(mywidget, 1);			// 1 puts Widget over the entities	
+		Lib.current.stage.addChildAt(mywidget, 1);			// 1 for openfl.display.DisplayObject puts Widget over the entities	
 	}
 	
 	function controlEnt1():Void {
