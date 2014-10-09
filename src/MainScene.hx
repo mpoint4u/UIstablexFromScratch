@@ -43,9 +43,11 @@ class MainScene extends Scene
 	private function _createMainWidget():Void 
 	{
 		// create the main widget
-		mywidget = UIBuilder.buildFn('ui/index.xml')();	
-		mywidget.left = 10;
-		mywidget.top = 10;
+		mywidget = UIBuilder.buildFn('ui/index.xml')();
+		
+		// give an offset on the main widget IF NEEDED !! ... 
+		mywidget.left = 0;
+		mywidget.top = 0;
 		Lib.current.stage.addChildAt(mywidget, 1);			// 1 puts Widget over the entities	
 	}
 	
