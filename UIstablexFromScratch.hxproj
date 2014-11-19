@@ -33,7 +33,7 @@
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="True" />
-    <option additional="--no-output &#xA;--remap flash:openfl&#xA;#--macro keep(&quot;MainStablexHXP&quot;)&#xA;-debug " />
+    <option additional="--no-output &#xA;--remap flash:openfl&#xA;#--macro keep(&quot;MainStablexHXP&quot;)" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>

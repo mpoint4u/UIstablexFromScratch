@@ -95,7 +95,7 @@ line1="src=&quot;{*src*}&quot;">
 <meta:repeat item="y"
 line0="meta:repeat"
 line1="times=&quot;{*times*}&quot;">
-<times type="Text" ref="y">40</times>
+<times type="Text" ref="y">15</times>
 <Widget item="y">
 <h>50</h>
 <skin:Tile-border>4</skin:Tile-border>

@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Widget>
-	<ColorWidget id="'custom'"
-				 color="0x8080C0"
+	<ColorWidget color="0x8080C0"
+				 h="600"
 				 top="0"
-				 left="0"
 				 w="800"
-				 h="625">
+				 id="'custom'"
+				 left="0">
 	</ColorWidget>
-
-	<VBox paddingTop="20">
-		<Text defaults="'Title'"
-			  text="'Playing with HaxePunk and StablexUI'"
-			  top="50" />
+	<VBox>
 		<HBox h="600"
 			  w="800"
 			  childPadding="20">
@@ -19,11 +15,11 @@
 					hBar-slider-skin:Paint-color="0x002200"
 					h="500"
 					on-display="     $this.scrollX = $this.w / 2 - $this.box.w / 2;     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    "
-					vBar-slider-skin:Paint-color="0x002200"
+					skin:Paint-border="4"
 					skin:Paint-color="0xAAAAAA"
 					w="500"
 					vBar-skin:Paint-color="0x777777"
-					skin:Paint-border="4">
+					vBar-slider-skin:Paint-color="0x002200">
 				<Box padding="10">
 					<Bmp src="'assets/img/map.jpg'">
 					</Bmp>
@@ -31,30 +27,30 @@
 			</Scroll>
 			<Scroll h="500"
 					on-display="     $this.scrollY  = $this.h / 2 - $this.box.h / 2;    "
-					vBar-slider-skin:Paint-color="0x002200"
+					skin:Paint-border="4"
 					skin:Paint-color="0xAAAAAA"
 					w="150"
 					vBar-skin:Paint-color="0x777777"
-					skin:Paint-border="4"
+					vBar-slider-skin:Paint-color="0x002200"
 					hBar-visible="false">
 				<Box childPadding="5"
 					 paddingBottom="10"
 					 paddingTop="10"
 					 widthPt="100">
-					<meta:repeat times="40">
-						<Widget widthPt="100"
-								h="50"
+					<meta:repeat times="15">
+						<Widget h="50"
 								skin:Tile-border="4"
 								skin:Tile-corners="[20]"
-								skin:Tile-src="'assets/img/nme.png'">
+								skin:Tile-src="'assets/img/nme.png'"
+								widthPt="100">
 						</Widget>
 					</meta:repeat>
 				</Box>
 			</Scroll>
 		</HBox>
-		<Button defaults="'AnotherFormat'"
-				text="'  set random color  '"
-				on-click=" #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); ">
+		<Button text="'set random color'"
+				on-click=" #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); "
+				defaults="'Red'">
 		</Button>
 	</VBox>
 </Widget>
