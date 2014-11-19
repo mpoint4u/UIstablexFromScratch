@@ -50,7 +50,7 @@
 		</HBox>
 		<Button text="'set random color'"
 				on-click=" #ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh(); "
-				defaults="'Red'">
+				defaults="'AnotherFormat'">
 		</Button>
 	</VBox>
 </Widget>
