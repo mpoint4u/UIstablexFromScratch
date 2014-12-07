@@ -38,7 +38,7 @@ class Main extends Sprite
 		
 		
 		flash.Lib.current.addChild( UIBuilder.buildFn(
-					'/Users/marcus/Dropbox/DEV/haXe3/pm_haxe3_projects/UIstablexFromScratch/first.xml'
+					'ui/index.xml'
 													)() );
 		
 		trace("UI element added to stage...");
