@@ -1,2 +1,29 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Text left="50" top="100" text="'My first widget!'"/>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- root element for our UI -->
+<Floating id="'root'" widthPt="100" heightPt="100" skin:Paint-color="0x000000" >
+
+	<!-- Header -->
+	<HBox id="'topMenu'" defaults="'TopMenu'">
+		<Bmp bitmapData="ru.stablex.ui.themes.android4.Main.getBitmapData('img/ico/light/settings.png')" />
+		<Text defaults="'H1'" text="'StablexUI'"/>
+	</HBox>
+
+	<!-- Screens holder -->
+	<ViewStack id="'screens'" widthPt="100" trans:Slide-direction="'left'" trans:Slide-duration="0.2">
+
+		<!-- Initial screen -->
+
+
+	</ViewStack>
+
+	<!-- Main menu -->
+	<HBox id="'bottomMenu'" defaults="'BottomMenu'">
+		<!-- back button -->
+		<Button defaults="'MainBack'" on-click=""/>
+		<!-- home button -->
+		<Button defaults="'MainHome'" on-click=""/>
+		<!-- recent button -->
+		<Button defaults="'MainRecent'" on-click=""/>
+	</HBox>
+</Floating>
