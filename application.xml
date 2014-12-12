@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	<!-- NMML reference: https://gist.github.com/1763850 -->
-	
-	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
 	<meta title="UIstablexFromScratch" package="at.mpoint4u.UIstablexFromScratch" version="1.0.0" company="pm" />
+	<app main="com.example.Main" file="UIstablexFromScratch" path="bin" />
 	
-	<!-- output -->
-	<app main="MainStatic" file="UIstablexFromScratch" path="bin" />
-	
-    <window width="320" height="480" background="0x888888" fps="60"/>
+    <window width="480" height="640" background="0x888888" fps="30"/>
     <window width="0" height="0" fullscreen="true" if="mobile"/>
-	
-	<!-- classpath, haxe libs -->
-	<source path="src" />
-	<haxelib name="openfl" />
-	<haxelib name="actuate" />
-	<haxelib name="stablexui" />
 	
 	<!-- assets -->
 	<icon path="assets/openfl.svg" />
-<!--	<assets path="assets/img" rename="img" />-->
-    <assets path="ui/android" include="*" exclude="defaults.xml|skins.xml"/>		
-	<!-- optimize output
-	<haxeflag name="-dce full" /> -->
+    <assets path="ui/android" include="*" exclude="defaults.xml|skins.xml"/>
+	
+	<!-- classpath, haxe libs -->
+	<haxelib name="stablexui" />
+	
+	<haxelib name="openfl" />
+	<set name="html5-backend" value="openfl-html5-dom" />
+	<haxelib name="actuate" />
+	
 	
 </project>
