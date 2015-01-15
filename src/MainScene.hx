@@ -54,7 +54,8 @@ class MainScene extends Scene
 		// give an offset on the main widget IF NEEDED !! ... 
 		mywidget.left = 0;
 		mywidget.top = 0;
-		Lib.current.stage.addChildAt(mywidget, 1);			// 1 for openfl.display.DisplayObject puts Widget over the entities	
+		Lib.current.stage.addChildAt(mywidget, 1);			// value '1' for openfl.display.DisplayObject
+															//   puts Widget over the entities
 	}
 	
 	function controlEnt1():Void {
